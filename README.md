@@ -1,4 +1,4 @@
-#Git workflow with release
+Git workflow with release
 --------------------------
 
 ### Branching
@@ -38,3 +38,4 @@
   - `git tag version`
   - `git push origin master`
   - `git push --tags`
+- After Merging into master we ensure that the release branche is merged into development
