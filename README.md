@@ -18,4 +18,23 @@
 
   - delete locally : `git branch -d feature/first-feature`
   - delete in the remote repo if not deleted when merging : `git push origin --delete feature/first-feature`
-- 
+
+### Preparing a release
+
+- Create the release branch :
+
+  - `git checkout development`
+  - `git pull origin development`
+  - `git checkout -b release/release-version`
+  - Commit changes and push to origin
+- After testing the release we merge it into master
+
+  - `git checkout master`
+  - `git pull origin master`
+  - `git checkout release/release-version`
+  - `git rebase master`
+  - `git checkout master`
+  - `git merge --ff-only release/release-version`
+  - `git tag version`
+  - `git push origin master`
+  - `git push --tags`
