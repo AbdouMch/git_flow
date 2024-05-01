@@ -34,7 +34,7 @@
   - `git checkout release/release-version`
   - `git rebase master`
   - `git checkout master`
-  - `git merge --ff-only release/release-version`
+  - `git merge release/release-version`
   - `git tag version`
   - `git push origin master`
   - `git push --tags`
